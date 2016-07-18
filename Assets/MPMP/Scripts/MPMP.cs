@@ -52,7 +52,7 @@ namespace monoflow {
 
         private bool _hasTextureProperty;
 
-        private Texture2D _videoTexture = null;
+        public Texture2D _videoTexture = null;
         [SerializeField]//, HideInInspector]
         private Texture _videoDefaultTexture = null;
         [SerializeField]//, HideInInspector]
