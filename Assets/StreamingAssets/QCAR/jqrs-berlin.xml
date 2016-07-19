@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="easteregg2" size="250.000000 84.172501" />
+    <ImageTarget name="easteregg1" size="250.000000 186.189438" />
+    <ImageTarget name="stall6" size="250.000000 226.297501" />
+    <ImageTarget name="stall5" size="250.000000 171.699341" />
+    <ImageTarget name="stall4" size="250.000000 165.555878" />
+    <ImageTarget name="stall3" size="250.000000 120.496979" />
+    <ImageTarget name="stall2" size="250.000000 149.988983" />
+    <ImageTarget name="stall1" size="250.000000 217.878784" />
     <ImageTarget name="chips" size="250.000000 175.000000" />
   </Tracking>
 </QCARConfig>
