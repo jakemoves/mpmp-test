@@ -7,7 +7,7 @@ public class arSceneOnButtonClick : MonoBehaviour {
 	public void Click(){
 		Debug.Log ("fired");
 
-		SceneManager.LoadScene("arScene");
+		SceneManager.LoadScene("arscene");
 	}
 
 }

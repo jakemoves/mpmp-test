@@ -14,7 +14,7 @@ namespace Vuforia
 	private bool targetHasBeenFound = false;
 	private bool showCornerImage = true;
 	string currentTargetTracked;
-	float timeLeft = 300.0f;
+	public float timeLeft = 150.0f;
 	
 	public Texture testImage;
 	public Texture stall1;
@@ -95,14 +95,11 @@ namespace Vuforia
 			}
 		}
 
-//		timerNotimplented yet
-//		void Update(){
-//			timeLeft -= Time.deltaTime;
-//
-//			if (timeLeft <= 0) {
-//
-//			}
-//		}
+
+		void Update(){
+			timeLeft -= Time.deltaTime;
+
+		}
 
 
 	}

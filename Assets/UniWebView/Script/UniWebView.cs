@@ -757,7 +757,6 @@ public class UniWebView : MonoBehaviour {
         if (destroy) {
             Hide();
             Destroy(this);
-			Application.LoadLevel ("menu");
         }
     }
 
