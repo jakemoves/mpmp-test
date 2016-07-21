@@ -1,11 +1,8 @@
-#if UNITY_IOS || UNITY_ANDROID || UNITY_WP8
-//
-//    UniWebView.cs
-//  Created by Wang Wei(@onevcat) on 2013-10-20.
-//
+
 using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// The main class of UniWebView.
@@ -757,6 +754,7 @@ public class UniWebView : MonoBehaviour {
         if (destroy) {
             Hide();
             Destroy(this);
+			SceneManager.LoadScene("menuscene");
         }
     }
 
@@ -946,4 +944,4 @@ public class UniWebView : MonoBehaviour {
     #endif
     #endregion
 }
-#endif //UNITY_IOS || UNITY_ANDROID
+ //UNITY_IOS || UNITY_ANDROID
