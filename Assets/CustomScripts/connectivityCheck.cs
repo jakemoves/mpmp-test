@@ -15,6 +15,7 @@ public class connectivityCheck : MonoBehaviour {
 	public Button beginAR;
 
 	IEnumerator Start(){
+		Screen.orientation = ScreenOrientation.LandscapeLeft;
 		//check if we hear anything from Google
 		WWW www = new WWW ("http://google.com");
 		yield return www;

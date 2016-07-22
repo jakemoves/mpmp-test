@@ -10,24 +10,29 @@ namespace Vuforia
 	{
 
 	private TrackableBehaviour mTrackableBehaviour;
+	
 
-		private bool targetHasBeenFound = false;
 	private bool startTheTimer = false;
 	private bool showCornerImage = true;
-	string currentTargetTracked;
+	
 	public float videoLength = 25.0f;
 	
 	public Texture testImage;
 	public Texture stall1;
 	public Texture stall2;
-	public Texture stall3;
-	public Texture stall4;
-	public Texture stall5;
-	public Texture stall6;
+
+	
 	GUIContent content;
+	//this has to be dragged into the inspector
+	public monoflow.MPMP mpmpVideo;
+	
+	
 	
 	void Start () {
+			
+
 			content = new GUIContent(stall1);
+
 
 			mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 				if (mTrackableBehaviour)
@@ -49,17 +54,22 @@ namespace Vuforia
 		if (newStatus == TrackableBehaviour.Status.DETECTED ||
 			newStatus == TrackableBehaviour.Status.TRACKED)
 		{
-				
+
+				mpmpVideo.Play ();
+				mpmpVideo.looping = false;
+
+
 				startTheTimer = true;	
 				showCornerImage = false;
 		} else {
+				//show cornerImage when AR isn't playing
 				showCornerImage = true;
 		}
 	}
-
+		//all GUI updated are within the OnGUI()
 	void OnGUI() {
 			if (showCornerImage) {
-				GUI.Box (new Rect ((Screen.width - 200), 0, 200, 200), content);
+				GUI.Box(new Rect ((Screen.width - 200), 0, 200, 200), content);
 			
 			}
 		}
@@ -76,7 +86,11 @@ namespace Vuforia
 				
 			}
 
+
+
+
 		}
+
 
 
 	}

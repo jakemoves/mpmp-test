@@ -78,7 +78,7 @@ namespace Vuforia
 
 		void OnGUI() {
 			if (showCornerImage && previousScriptRemoved) {
-				GUI.Box (new Rect (0, 0, 100, 100), content);
+				GUI.Box(new Rect ((Screen.width - 200), 0, 200, 200), content);
 
 			}
 		}
