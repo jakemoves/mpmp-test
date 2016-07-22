@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: 634efda60aadca147a4a2146ed6c7c71
-timeCreated: 1464356509
-licenseType: Pro
+guid: 5a25872113433a446a71e038bbe66e8f
+timeCreated: 1464262140
+licenseType: Store
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -22,7 +22,7 @@ PluginImporter:
         DefaultValueInitialized: true
         OS: Windows
     Linux:
-      enabled: 1
+      enabled: 0
       settings:
         CPU: None
     Linux64:
@@ -30,11 +30,11 @@ PluginImporter:
       settings:
         CPU: x86_64
     LinuxUniversal:
-      enabled: 1
+      enabled: 0
       settings:
         CPU: x86_64
     OSXIntel:
-      enabled: 1
+      enabled: 0
       settings:
         CPU: None
     OSXIntel64:
@@ -42,7 +42,7 @@ PluginImporter:
       settings:
         CPU: AnyCPU
     OSXUniversal:
-      enabled: 1
+      enabled: 0
       settings:
         CPU: x86_64
     Win:

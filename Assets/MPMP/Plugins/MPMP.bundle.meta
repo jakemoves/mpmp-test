@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 7475c6b7b3a0c43e399f2a784125f3e2
 folderAsset: yes
 timeCreated: 1452729732
-licenseType: Pro
+licenseType: Store
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -35,9 +35,9 @@ PluginImporter:
       settings:
         CPU: AnyCPU
     OSXIntel:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: AnyCPU
+        CPU: None
     OSXIntel64:
       enabled: 1
       settings:
@@ -45,7 +45,7 @@ PluginImporter:
     OSXUniversal:
       enabled: 1
       settings:
-        CPU: AnyCPU
+        CPU: x86_64
     SamsungTV:
       enabled: 0
       settings:

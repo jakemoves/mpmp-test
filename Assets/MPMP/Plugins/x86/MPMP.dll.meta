@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 215d9227f53c3544eb5786a9030ccb72
-timeCreated: 1453109336
-licenseType: Pro
+timeCreated: 1460308723
+licenseType: Store
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -45,16 +45,6 @@ PluginImporter:
       enabled: 0
       settings:
         CPU: x86
-    SamsungTV:
-      enabled: 0
-      settings:
-        STV_MODEL: STANDARD_13
-    WP8:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-        DontProcess: False
-        PlaceholderPath: 
     Win:
       enabled: 1
       settings:
@@ -63,18 +53,6 @@ PluginImporter:
       enabled: 0
       settings:
         CPU: None
-    WindowsStoreApps:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-        DontProcess: False
-        PlaceholderPath: 
-        SDK: AnySDK
-    iOS:
-      enabled: 0
-      settings:
-        CompileFlags: 
-        FrameworkDependencies: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 

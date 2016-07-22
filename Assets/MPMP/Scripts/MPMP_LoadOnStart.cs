@@ -17,19 +17,15 @@ namespace monoflow
     {
         [Tooltip("If you don't specify any MPMP instance the script will add the MPMP instance that is on this GameObject")]
         public MPMP[] mpmpList;
-
-		public MPMP myMPMP;
     
         IEnumerator Start()
         {
-			
             if(mpmpList.Length == 0)
             {               
                 var mpmp = GetComponent<MPMP>();
                 if (mpmp != null)
                 {
-                    mpmpList = new MPMP[] { mpmp }; 
-
+                    mpmpList = new MPMP[] { mpmp };         
                 }            
             }
 
