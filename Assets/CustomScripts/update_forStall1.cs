@@ -16,7 +16,7 @@ namespace Vuforia
 	private bool showCornerImage = true;
 	
 	public float videoLength = 25.0f;
-	
+	//these have to be dragged into the inspector
 	public Texture testImage;
 	public Texture stall1;
 	public Texture stall2;
@@ -62,13 +62,14 @@ namespace Vuforia
 				startTheTimer = true;	
 				showCornerImage = false;
 		} else {
-				//show cornerImage when AR isn't playing
+				//show cornerImage when Target isn't in view
 				showCornerImage = true;
 		}
 	}
 		//all GUI updated are within the OnGUI()
 	void OnGUI() {
 			if (showCornerImage) {
+				//draw a box (x1,x2,y1,y2), content
 				GUI.Box(new Rect ((Screen.width - 200), 0, 200, 200), content);
 			
 			}
@@ -82,10 +83,13 @@ namespace Vuforia
 			}
 
 			if (videoLength <= 0) {
+				//update to new stall image
 				content = new GUIContent (stall2);
+				//show it
 				showCornerImage = true;
+				//stop video (though mobile doesn't seem to run this)
 				mpmpVideo.Stop ();
-
+				//destroy the object containing the mpmp
 				Destroy(Luke);
 			}
 
