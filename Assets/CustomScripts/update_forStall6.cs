@@ -19,11 +19,12 @@ namespace Vuforia
 		//* - change
 		public float videoLength = 25.0f;
 		public Texture stall6;
-		public Texture testImage;
+		public Texture easterEgg1;
 
 		GUIContent content;
 
 		public monoflow.MPMP mpmpVideo;
+		public GameObject Luke;
 
 		private Texture newStallPic;
 		private Texture currentStallPic;
@@ -34,7 +35,7 @@ namespace Vuforia
 		void Start () {
 			//* - change
 			currentStallPic = stall6;
-			newStallPic = testImage;
+			newStallPic = easterEgg1;
 
 			content = new GUIContent (currentStallPic);
 
@@ -53,7 +54,7 @@ namespace Vuforia
 			if (videoLength <= 0) {
 				content = new GUIContent (newStallPic);
 				showCornerImage = true;
-				Destroy (mpmpVideo);
+				Destroy(Luke);
 			}
 		}
 

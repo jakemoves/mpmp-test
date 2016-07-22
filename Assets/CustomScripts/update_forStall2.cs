@@ -23,6 +23,7 @@ namespace Vuforia
 		GUIContent content;
 
 		public monoflow.MPMP mpmpVideo;
+		public GameObject Luke;
 
 		private Texture newStallPic;
 		private Texture currentStallPic;
@@ -52,7 +53,7 @@ namespace Vuforia
 			if (videoLength <= 0) {
 				content = new GUIContent (newStallPic);
 				showCornerImage = true;
-				Destroy (mpmpVideo);
+				Destroy(Luke);
 			}
 		}
 

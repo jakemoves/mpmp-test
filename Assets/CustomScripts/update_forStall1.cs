@@ -20,7 +20,8 @@ namespace Vuforia
 	public Texture testImage;
 	public Texture stall1;
 	public Texture stall2;
-
+	
+	public GameObject Luke;
 	
 	GUIContent content;
 	//this has to be dragged into the inspector
@@ -30,10 +31,10 @@ namespace Vuforia
 	
 	void Start () {
 			
-
+			//image to go in our corner box
 			content = new GUIContent(stall1);
 
-
+			//vuforia trackable stuff
 			mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 				if (mTrackableBehaviour)
 				{
@@ -54,7 +55,7 @@ namespace Vuforia
 		if (newStatus == TrackableBehaviour.Status.DETECTED ||
 			newStatus == TrackableBehaviour.Status.TRACKED)
 		{
-
+				//start mpmp when target is acquired
 				mpmpVideo.Play ();
 				mpmpVideo.looping = false;
 
@@ -83,7 +84,9 @@ namespace Vuforia
 			if (videoLength <= 0) {
 				content = new GUIContent (stall2);
 				showCornerImage = true;
-				Destroy (mpmpVideo);
+				mpmpVideo.Stop ();
+
+				Destroy(Luke);
 			}
 
 		}
