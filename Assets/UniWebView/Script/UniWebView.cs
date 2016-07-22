@@ -755,7 +755,7 @@ public class UniWebView : MonoBehaviour {
         if (destroy) {
             Hide();
             Destroy(this);
-			SceneManager.LoadScene("menuscene");
+			SceneManager.LoadScene("menu");
 
         }
     }
