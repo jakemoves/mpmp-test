@@ -746,6 +746,7 @@ public class UniWebView : MonoBehaviour {
     }
 
     private void WebViewDone(string message) {
+		
         bool destroy = true;
         if (OnWebViewShouldClose != null) {
             destroy = OnWebViewShouldClose(this);
@@ -755,6 +756,7 @@ public class UniWebView : MonoBehaviour {
             Hide();
             Destroy(this);
 			SceneManager.LoadScene("menuscene");
+
         }
     }
 

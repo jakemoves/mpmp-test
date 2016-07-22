@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: efbd9af7c64ca47288439c7ccb60676c
+timeCreated: 1469188936
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - stall6: {fileID: 2800000, guid: c6c5f3fb0d5ba491f916bf89a542f794, type: 3}
+  - testImage: {instanceID: 0}
+  - mpmpVideo: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

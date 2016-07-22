@@ -9,14 +9,37 @@ public class connectivityCheck : MonoBehaviour {
 
 	//connected? yes or no
 	bool connected;
+
+	public float timer = 10.0f;
 	//Buttons
 	public Button webSiteLink;
 	public Button webView;
 	public Button beginAR;
 
-	IEnumerator Start(){
+	void Start(){
 		//puts screen in landscape
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
+
+		StartCoroutine("GoogleCheck");
+	}//--end of Start code that runs once
+
+	void OnGUI(){ //--all the GUI manipulation has to go in here
+		if (connected == false) {
+			GUI.Box (new Rect (0, 0, Screen.width, Screen.height / 2), "<size=25><color=white>I'm sorry, your device is not connected to a network</color></size>", style);
+			GUI.Box (new Rect (0, 35, Screen.width, Screen.height / 2), "<size=20><color=white>Please check your network settings and try again</color></size>", style);
+		} 
+	}
+
+	void Update(){
+		if (!connected) {
+			timer -= Time.deltaTime;
+		}
+		if (timer <= 0) {
+			StartCoroutine ("GoogleCheck");
+		}
+	}
+	//IEnumerator is a repeatable block
+	IEnumerator GoogleCheck(){
 		//check if we hear anything from Google
 		WWW www = new WWW ("http://google.com");
 		yield return www;
@@ -24,6 +47,7 @@ public class connectivityCheck : MonoBehaviour {
 		if (www.error != null) {
 			Debug.Log ("not connected");
 			connected = false;
+
 			//styling for the text
 			style.alignment = TextAnchor.MiddleCenter;
 			//allow some html markup later
@@ -32,20 +56,14 @@ public class connectivityCheck : MonoBehaviour {
 			webSiteLink.gameObject.SetActive(false);
 			webView.gameObject.SetActive(false);
 			beginAR.gameObject.SetActive(false);
+			timer = 10.0f;
 		} else {
 			Debug.Log ("connected");
 			connected = true;
+			webSiteLink.gameObject.SetActive(true);
+			webView.gameObject.SetActive(true);
+			beginAR.gameObject.SetActive(true);
 
-//			webSiteLink.gameObject.SetActive(true);
-//			webView.gameObject.SetActive(true);
-//			beginAR.gameObject.SetActive(true);
-		}
-	}//--end of Start code that runs once
-
-	void OnGUI(){ //--all the GUI manipulation has to go in here
-		if(connected == false){
-			GUI.Box(new Rect(0, 0, Screen.width, Screen.height/2), "<size=25><color=white>I'm sorry, your device is not connected to a network</color></size>", style);
-			GUI.Box(new Rect(0, 35, Screen.width, Screen.height/2), "<size=20><color=white>Please quit this app, check your network settings, and try again</color></size>", style);
 		}
 	}
 
